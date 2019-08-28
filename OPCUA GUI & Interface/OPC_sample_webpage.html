@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RC Demo Webpage</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <h1 style="color: red">THIS IS A NON FUNCTIONAL EXHIBITION OF THE PROPOSED INTERFACE<h1>
+        <h1>Siemens-USC Virtual Commissioning Remote Control</h1>
+        <div class="toplayout">
+            <div class="column" style="width:75%; height:105px">
+                <p style="font-size: 16px">This web interface serves as a basic intermediary between the remote user and the Siemens-USC workspace</p>
+                <p style="font-size: 16px; color: red">All functionalities of this interface is limited to the level of access and requires an attending robotic technician at site to operate.</p>
+            </div>
+            <div class="column" style="width:25%; height: 105px">
+                <div class="row">
+                    <div class="statuswindow">
+                        <table align=right>
+                            <tr>
+                                <td>Connection Status</td>
+                                <td style="background-color: red">Not Connected</td>
+                            </tr>
+                            <tr>
+                                <td>Remote Station</td>
+                                <td style="background-color: red">Not in Remote Control mode</td>
+                            </tr>
+                            <tr>
+                                <td>Access Level</td>
+                                <td style="background-color: green">0 / Academic</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column left" style="background-color: #aaa;  height: 400px;">
+                <h2>Main Controls</h2>
+                <button class="maincontrol button" onclick='toggleState("s1")'>External Servo On</button>
+                <button class="maincontrol button" onclick='toggleState("s2")'>Safety Speed Enable</button>
+                <button class="maincontrol button" onclick='toggleState("s3")'>Emergency STOP</button>
+                <button class="maincontrol button" onclick='toggleState("s4")'>Play Mode Select</button>
+                <button class="maincontrol button" onclick='toggleState("s5")'>Master Job Call</button>
+                <button class="maincontrol button" onclick='toggleState("s6")'>External Start</button>
+                <button class="maincontrol button" onclick='toggleState("s7")'>External Hold</button>
+                <button class="maincontrol button" onclick='toggleState("s8")'>Start Pour Task</button>
+                <button class="maincontrol button" onclick='toggleState("s9")'>Start Cap Task</button>
+                <button class="maincontrol button" onclick='toggleState("s10")'>Return to Home Position</button>
+                <br></br>
+                <button class="button" style="background-color: black; color: white">Commit Signal Changes</button>
+
+
+            </div>
+            <div class="column middle" style="background-color: #bbb; height: 400px;">
+                <h2>Signal Readback</h2>
+                <table>
+                    <tr><td id="s1">False</td></tr>
+                    <tr><td id="s2">False</td></tr>
+                    <tr><td id="s3">False</td></tr>
+                    <tr><td id="s4">False</td></tr>
+                    <tr><td id="s5">False</td></tr>
+                    <tr><td id="s6">False</td></tr>
+                    <tr><td id="s7">False</td></tr>
+                    <tr><td id="s8">False</td></tr>
+                    <tr><td id="s9">False</td></tr>
+                    <tr><td id="s10">False</td></tr>
+                </table>
+            </div>
+            <div class="column right" style="background-color: #ccc; height: 400px;">
+                <div class="row">
+                    <h2>Sensor Readback</h2>
+                    <table>
+                        <tr>
+                            <td>Sensors 1</td>
+                            <td>Sensors 2</td>
+                            <td>Sensors 3</td>
+                            <td>Sensors 4</td>
+                        </tr>
+                        <tr>
+                            <td>Sensors 5</td>
+                            <td>Sensors 6</td>
+                            <td>Sensors 7</td>
+                            <td>Sensors 8</td>
+                        </tr>
+                        <tr>
+                            <td>Sensors 9</td>
+                            <td>Sensors 10</td>
+                            <td>Sensors 11</td>
+                            <td>Sensors 12</td>
+                        </tr>
+                        <tr>
+                            <td>Sensors 13</td>
+                            <td>Sensors 14</td>
+                            <td>Sensors 15</td>
+                            <td>Sensors 16</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row">
+                    <h2>One Click to Run</h2>
+                    <div class="row">
+                        <table class="ignore-css" width=150px align=left>
+                            <tr>
+                                <th colspan=2 style="background-color: #e4e9f2">Bottle Task</th>
+                            </tr>
+                            <tr>
+                                <td><button class="oneclick button">Pour Task</button></td>
+                                <td><button class="oneclick button">Cap Task</button></td>
+                            </tr>
+                        </table>
+                        <table class="ignore-css" width=150px align=left>
+                            <tr>
+                                <th colspan=2 style="background-color: #e4e9f2">3 Box Stack</th>
+                            </tr>
+                            <tr>
+                                <td><button class="oneclick button">Stack Task</button></td>
+                                <td><button class="oneclick button">Unstack Task</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p style="color: red; font-size: 12px" align="left">NOTE: These functions will only run with all preliminary safety precautions satisfied and the workspace ready to accept remote commands with an attending robotic technician</p>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            function toggleState(param) {
+                var status = document.getElementById(param).innerHTML
+                if (status == 'False') {
+                    document.getElementById(param).innerHTML = "True"
+                } else {
+                    document.getElementById(param).innerHTML = "False"
+                }
+            }
+        </script>
+    </body>
+</html>

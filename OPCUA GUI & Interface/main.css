@@ -1,0 +1,104 @@
+body {
+    margin: 60px auto;
+    width: 70%;
+}
+nav ul, footer ul {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+}
+nav ul li, footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    color: #999;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1 {
+    font-size: 30px;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+p {
+    font-size: 20px;
+    color: #333;
+}
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
+}
+
+ul.posts { 
+    margin: 20px auto 40px; 
+    font-size: 1.5em;
+}
+
+ul.posts li {
+    list-style: none;
+}
+* {
+  box-sizing: border-box;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+td {
+  height: 25px;
+  width: 120px;
+  text-align: center;
+  background-color: #e4e9f2;
+  font-size: 14px;
+  padding: 3px 3px;
+}
+.statuswindow {
+  float: right;
+}
+.toplayout {
+  float:left;
+}
+.column {
+  float: left;
+  padding: 10px;
+}
+.left {
+  width: 22%;
+}
+.middle {
+  width: 19%;
+}
+.right {
+  width: 59%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding-bottom: 10px;
+}
+.button {
+    background-color: #e4e9f2;
+    color: black;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+.maincontrol {
+  padding: 3px 3px;
+  width: 200px
+}
+.oneclick {
+  padding: 3px 3px;
+  width: 100px;
+  height: 25px;
+}
+.button:hover {
+    background-color: grey;
+}
+.ignore-css {
+  all:unset;
+}
