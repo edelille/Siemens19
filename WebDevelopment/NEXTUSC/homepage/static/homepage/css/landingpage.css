@@ -1,0 +1,32 @@
+body {
+    background-color: #242424;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.flex-column {
+    margin-top:65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.main-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.login-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: conter;
+    background-color: white;
+    height: 300px;
+    width: 300px;
+}
